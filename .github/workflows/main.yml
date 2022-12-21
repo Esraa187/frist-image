@@ -12,8 +12,7 @@ jobs:
 
 
     steps:
-      - name: 'Testing Githup action'
-        run: pwd
+      - name: 'Printing Folder action'
+        run: ls
 
-      - name: 'Testing Printing action'
-        run: echo Esraa
+      
