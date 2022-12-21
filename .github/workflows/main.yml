@@ -12,7 +12,10 @@ jobs:
 
 
     steps:
-      - name: 'Printing Folder action'
+      - name: 'Before Printing Folder action'
         run: ls
 
-      
+      - uses: actions/checkout@v3  
+
+      - name: 'After Printing Folder action'
+        run: ls 
