@@ -12,10 +12,8 @@ jobs:
 
 
     steps:
-      - name: 'Before Printing Folder action'
-        run: ls
+      
+      - uses: actions/checkout@v3 
 
-      - uses: actions/checkout@v3  
-
-      - name: 'After Printing Folder action'
-        run: ls 
+      - name: "Login to Docker hub"
+        run: docker login --username esraa123 --password dckr_pat_Otk4ABWZH6HJ-BI9rSatbzlrTfI
