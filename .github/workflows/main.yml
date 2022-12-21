@@ -17,3 +17,10 @@ jobs:
 
       - name: "Login to Docker hub"
         run: docker login --username ${{ secrets.DOCKER_HUB }} --password ${{ secrets.DOCKER_TTT }}
+      
+      - name: "Building Docker Image"
+        run: docker build -t ${{ secrets.DOCKER_HUB }}/nginx-test .
+
+      - name: "Pushing to Docker"
+        run: docker push ${{ secrets.DOCKER_HUB }}/nginx-test 
+
